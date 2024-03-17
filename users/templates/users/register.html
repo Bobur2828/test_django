@@ -1,0 +1,111 @@
+{% load static %}
+<!doctype html>
+
+<html lang="en"> 
+
+    <head> 
+
+        <meta charset="UTF-8"> 
+
+        <title>register</title> 
+
+        <link rel="stylesheet" href="{% static 'users/style.css' %}"> 
+
+    </head> 
+
+    <body> <!-- partial:index.partial.html --> 
+
+    <section> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+
+    <div class="signin"> 
+
+        <div class="content"> 
+
+            <h2>Ro'yhatdan o'tish</h2> 
+
+                <div class="form"> 
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="inputBox"> 
+
+                            {{ form.username }}
+                            <i>Login Kiriting</i>
+
+                        </div> 
+                        <div>
+                            <div class="custom-line"></div>
+
+ 
+                            
+                        </div>
+                        <div class="inputBox"> 
+
+                            {{ form.first_name }}
+                            <i>Ismingizni kiriting</i>
+
+                        </div> 
+                        <div>
+
+                            <div class="custom-line"></div>
+            
+                            
+                        </div>
+                        <div class="inputBox"> 
+
+                            {{ form.last_name }}
+                            <i>Familiyangizni kiriting</i>
+
+                        </div> 
+                        <div>
+
+                            <div class="custom-line"></div>
+           
+                            
+                        </div>  
+                        <div class="inputBox"> 
+
+                            {{ form.email }}
+                            <i>E-mail kiriting</i>
+
+
+                            <div class="custom-line"></div>
+          
+                            
+                        </div>  
+                        <div class="inputBox" type=password> 
+
+                            {{ form.password }}
+                            <i>Parol kiriting</i>
+
+                        </div> 
+                        <div>
+                            <div class="custom-line"></div>
+                    
+                            
+                        </div>
+
+                        <div class="links"> <a href="{% url 'users:login'%}">Akkaunt mavjud bo'lsa kirish</a>
+
+                        </div> 
+                        <div>
+                            <div class="custom-line"></div>
+                            <div class="custom-line"></div>
+                            <div class="custom-line"></div>
+                            
+                        </div>
+                        <div class="inputBox"> 
+                        <input type="submit" value="Ro'yhatdan o'tish"> 
+                    </form>
+                    </div> 
+
+                </div> 
+
+            </div> 
+
+        </div> 
+
+    </section> <!-- partial --> 
+
+    </body>
+
+</html>
