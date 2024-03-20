@@ -6,6 +6,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.landing, name='landing'),
     path('users/',include('users.urls')),
+    path('place/',include('places.urls')),
+
 
     
 

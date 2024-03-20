@@ -21,7 +21,7 @@ class RegisterView(View):
 class LoginView(View):
     def get(self, request):
         form = LoginForm()
-        return render(request, 'users/index.html', context={'form': form})
+        return render(request, 'users/login.html', context={'form': form})
     
     def post(self, request):
         form = LoginForm(request.POST)
@@ -33,4 +33,9 @@ class LoginView(View):
                 return redirect('landing')
 
         # If form is not valid or user authentication fails
-        return render(request, 'users/index.html', {'form': form})
+        return render(request, 'users/login.html', context={'form': form})
+    
+
+
+def profile(request):
+    return render(request, 'users/profile.html')

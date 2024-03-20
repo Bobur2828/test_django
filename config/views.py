@@ -1,4 +1,6 @@
 from django.shortcuts import render
-
+from places.models import Place
 def landing(request):
-    return render(request, 'landing.html')
+    place=Place.objects.all()
+    data={'place':place}
+    return render(request, 'landing.html', context=data)
